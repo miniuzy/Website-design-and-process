@@ -39,6 +39,10 @@ main {
   background: #eee;
   padding: .5em;
 }
+#banner img {
+    width:100%;
+}
+}
 figure {
   width:100%;
   overflow: hidden;
@@ -65,13 +69,75 @@ figure img {
   margin-bottom: -4em;
   display: block;
 }
+
+.teams {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.players {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
 .player1 {
   position: relative;
   box-sizing: border-box;
   width: 200px;
   height: 200px;
-  /*padding: 0 1em;*/
-  padding-top:5em;
+  padding-top:4em;
+  animation-name: movingBox;
+  animation-duration: 5s;
+  animation-iteration-count: 1; /* infinite */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.player2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top:4em;
+  animation-name: movingBox;
+  animation-duration: 5s;
+  animation-iteration-count: 1; /* infinite */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.player3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top:4em;
+  animation-name: movingBox;
+  animation-duration: 5s;
+  animation-iteration-count: 1; /* infinite */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.player4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top:4em;
+  animation-name: movingBox;
+  animation-duration: 5s;
+  animation-iteration-count: 1; /* infinite */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.player5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top:4em;
   animation-name: movingBox;
   animation-duration: 5s;
   animation-iteration-count: 1; /* infinite */
@@ -79,8 +145,35 @@ figure img {
   animation-timing-function: ease-in-out;
 }
 @keyframes movingBox {
-  0%   { left: 0px; }
-  100%  { left: 6em;}
+    0% {top: 0px;}
+
+    100% {top: -4em;}
+}
+section {
+  width:100%;
+  overflow: hidden;
+}
+section:hover figcaption {
+  transform: translateY(0em);
+  opacity: 0.78;
+}
+figcaption {
+  box-sizing: border-box;
+  height: 4em;
+  line-height: 1.2em;
+  padding: .25em;
+  transform: translateY(4em);
+  background: #fff;
+  color: black;
+  opacity: 0;
+  transition: all .5s;
+}
+
+section img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -4em;
+  display: block;
 }
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
