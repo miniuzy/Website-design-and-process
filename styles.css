@@ -10,18 +10,20 @@ header {
   color: #444;
 }
 nav {
-  background: #aaa;
+  background:#F08080;
   display: none;
   z-index: 100;
 }
 nav a {
   padding: 1em;
   display: block;
+  color:#F0FFFF;
 }
 #menu {
   padding: 1em;
-  background: #fff;
+  background:#DC143C;
   display: block;
+  color:#F0FFFF;
 }
 .show-menu {
   display: block;
@@ -34,9 +36,18 @@ h1 {
   font-size: 1.5em;
   margin: 0;
   padding: 1em;
+  background-color:#8B008B;
+  color:#F0FFFF;
+}
+h2 {
+	font-size:1.2em;
+	margin: 0;
+	padding: 1em;
+	background-color:#DC143C;
+	color:#F0FFFF;
 }
 main {
-  background: #eee;
+  background: #F0FFFF;
   padding: .5em;
 }
 #banner img {
@@ -57,8 +68,8 @@ figcaption {
   line-height: 1.2em;
   padding: .25em;
   transform: translateY(4em);
-  background: #fff;
-  color: black;
+  background:#F08080;
+  color:#F0FFFF;
   opacity: 0;
   transition: all .5s;
 }
@@ -71,6 +82,13 @@ figure img {
 }
 
 .teams {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.leagues {
     display:flex;
     justify-content:center;
     align-items: center;
@@ -147,7 +165,9 @@ figure img {
 @keyframes movingBox {
     0% {top: 0px;}
 
-    100% {top: -4em;}
+    50% {top: -4em;}
+	
+	100% {top: 0px;}
 }
 section {
   width:100%;
@@ -156,17 +176,6 @@ section {
 section:hover figcaption {
   transform: translateY(0em);
   opacity: 0.78;
-}
-figcaption {
-  box-sizing: border-box;
-  height: 4em;
-  line-height: 1.2em;
-  padding: .25em;
-  transform: translateY(4em);
-  background: #fff;
-  color: black;
-  opacity: 0;
-  transition: all .5s;
 }
 
 section img {
