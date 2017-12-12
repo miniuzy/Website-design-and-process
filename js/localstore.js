@@ -34,7 +34,7 @@ function PerformGreeting() {
     // Gets the name the user entered and colour
     nameStored = userName.value;
 	colorStored = chooseColor.value;
-    if (confirm("Is this information correct?") == true) {
+    if (confirm("Is this information correct?\n"+ nameStored) == true) {
     txt = "OK Great!";
     // Shows the name in "my-name":
     myName.innerHTML = nameStored;  

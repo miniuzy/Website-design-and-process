@@ -14,17 +14,20 @@ nav {
   background:#F08080;
   display: none;
   z-index: 100;
+  border-radius:10px;
 }
 nav a {
   padding: 1em;
   display: block;
   color:#F0FFFF;
+
 }
 #menu {
   padding: 1em;
   background:#DC143C;
   display: block;
   color:#F0FFFF;
+  border-radius:10px;
 }
 .show-menu {
   display: block;
@@ -93,6 +96,7 @@ figcaption {
   color:#F0FFFF;
   opacity: 0;
   transition: all .5s;
+  border-radius:10px;
 }
 article img {
   width: 100%;
@@ -106,10 +110,7 @@ figure img {
   display: block;
   border-radius: 10px;
 }
-.logo1{
-	width:100px;
-	margin-left:26%;
-}
+
 .flex-container {
     display: flex;
     justify-content: center;
@@ -155,6 +156,23 @@ figure img {
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 }
+.player2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top:4em;
+  animation-name: movingBox;
+  animation-duration: 5s;
+  animation-iteration-count: 1; /* infinite */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.logo1 img {
+	width:30%;
+	float:left;
+	margin-left:40%;
+}
 
 #teams {
     padding: 60px 0;
@@ -169,12 +187,6 @@ figure img {
 }
 #teams article:first-child {
     margin-right: 20px;
-}
-#teams article .overlay {
-    background: rgba(255, 255, 255, .95);
-    height: 230px;
-    width: 190px;
-    padding: 20px;
 }
 #teams h3 {
     display: block;
@@ -195,6 +207,18 @@ figure img {
     background-color: #f5f5f5;
 
 }
+#leagues {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#leagues article {
+    width: 100%;
+    float: left;
+    background-color: #f5f5f5;
+	border-radius:10px;
+
+}
 #leagues article:first-child {
     margin-right: 20px;
 }
@@ -203,10 +227,6 @@ figure img {
     height: 230px;
     width: 190px;
     padding: 20px;
-}
-#leagues h3 {
-    display: block;
-    margin: 0 auto 20px auto;
 }
 #leagues h2 {
     display: block;
@@ -302,7 +322,7 @@ h1{
 .flex-container {
     display: flex;
     justify-content:space-around;
-    align-items: center;
+    align-items: flex-end;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	flex-direction:row;
@@ -310,8 +330,8 @@ h1{
 .player1 {
   position: relative;
   box-sizing: border-box;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   padding-top:4em;
   animation-name: movingBox;
   animation-duration: 5s;
@@ -322,8 +342,8 @@ h1{
 .player2 {
   position: relative;
   box-sizing: border-box;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   padding-top:4em;
   animation-name: movingBox1;
   animation-duration: 5s;
@@ -374,7 +394,7 @@ h1{
     display: none; 
     position: fixed; 
     bottom: 20px; 
-    right: 30px; 
+    float:left; 
     z-index: 99; 
     background-color: #F08080; 
     color: #F0FFFF; 
@@ -394,7 +414,38 @@ h1{
 #leagues img:hover {
     transform: scale(1.1);
 }
+.logo1 img:hover {
+    transform: scale(1.3);
+}
+.player1 figcaption {
+	box-sizing: border-box;
+	height: -4em;
+	line-height: 1em;
+	padding: .1em;
+	transform: translateY(-4em);
+	opacity: 0;
+	transition: all .5s;
+}
 
+.player1 figure:hover figcaption {
+  transform: translateY(-5em);
+  opacity: 0.78;
+  height:100px;
+}
+.logo1{
+	width:100px;
+	float:right;
+	margin-bottom:70px;
+
+}
+.signup h2 {
+	margin-top:20px;
+}
+.teams h2 {
+	margin-top:20px;
+	
+}
+}
 /*https://gyazo.com/848de3aa03742d8209beca769744eb1b
 https://gyazo.com/d33dccf5f08785e8bb76f4b128ed4f89  web idea implement*/
 

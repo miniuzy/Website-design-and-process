@@ -50,6 +50,7 @@ function initMap() {
   });
   
 }
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
