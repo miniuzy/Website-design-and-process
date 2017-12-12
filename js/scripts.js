@@ -54,13 +54,19 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("btn").style.display = "block";
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("btn").style.display = "none";
     }
 }
 
 
-function topFunction() {
-    document.documentElement.scrollTop = 0;
-}
+var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+    confirm("Please sign up now");
+    localStorage.setItem('alerted','yes');
+	window.scrollTo(0, document.body.scrollHeight);
+    }
+
+
+
