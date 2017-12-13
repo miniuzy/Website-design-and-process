@@ -71,7 +71,6 @@ h3 {
 }
 main {
   background: #F0FFFF;
-  padding: .5em;
 }
 #banner img {
     width:100%;
@@ -81,7 +80,12 @@ figure {
   width:100%;
   overflow: hidden;
 }
-
+.player1 figure {
+    margin:0;
+}
+.player2 figure {
+    margin:0;
+}
 figure:hover figcaption {
   transform: translateY(0em);
   opacity: 0.78;
@@ -126,18 +130,12 @@ figure img {
 #players article {
     width: 100%;
     float: left;
-    background-color: #f5f5f5;
+    background-color:#F0FFFF;
 	border-radius:10px;
 
 }
 #players article:first-child {
     margin-right: 20px;
-}
-#players article .overlay {
-    background: rgba(255, 255, 255, .95);
-    height: 230px;
-    width: 190px;
-    padding: 20px;
 }
 #players h2 {
     display: block;
@@ -182,7 +180,7 @@ figure img {
 #teams article {
     width: 100%;
     float: left;
-    background-color: #f5f5f5;
+    background-color:#f5f5f5;
 
 }
 #teams article:first-child {
@@ -195,17 +193,6 @@ figure img {
 #teams h2 {
     display: block;
     margin: 0 auto 20px auto;
-}
-#teams {
-    padding: 60px 0;
-    text-align: center;
-}
-
-#teams article {
-    width: 100%;
-    float: left;
-    background-color: #f5f5f5;
-
 }
 #leagues {
     padding: 60px 0;
@@ -222,16 +209,55 @@ figure img {
 #leagues article:first-child {
     margin-right: 20px;
 }
-#leagues article .overlay {
-    background: rgba(255, 255, 255, .95);
-    height: 230px;
-    width: 190px;
-    padding: 20px;
-}
 #leagues h2 {
     display: block;
     margin: 0 auto 20px auto;
 }
+#fixtures {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#fixtures section {
+    width: 100%;
+    float: left;
+    background-color: #F0FFFF;
+	border-radius:10px;
+
+}
+#fixtures section:first-child {
+    margin-right: 20px;
+}
+#fixtures h2 {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+#signup {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#signup section {
+    width: 100%;
+    float: left;
+    background-color: #f5f5f5;
+	border-radius:10px;
+
+}
+#signup section:first-child {
+    margin-right: 20px;
+}
+#signup h2 {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.tab_container h2 {
+    display:block;
+    margin: 100px auto 20px auto;
+}
+
+
+
 @keyframes movingBox {
     0% {left: 0px;}
 
@@ -261,6 +287,90 @@ figure img {
 	border:none;
 	outline:none;
 }
+#btn a {
+    color: #F0FFFF;
+}
+input[type="radio"]{
+    display:none;
+}
+
+.tab_container section {
+  display: none;
+  padding: 1em;
+  clear: both;
+}
+.tab_container section footer {
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  width: 100%;
+  margin-left: -1em;
+}
+.tab_container section footer p {
+  padding: 0 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.tab_container label {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  color: #888;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #eee;
+  line-height: 3em;
+  border-right: 1px solid #444;
+  margin-top:50px;
+}
+
+label span {
+  display: none;
+}
+label:last-child {
+  border-right: none;
+}
+
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+
+[id^="tab"]:checked + label {
+  background: #ccc;
+  color: #222;
+}
+[id^="tab"]:checked + label .fa {
+  color: #090;
+}
+
+.tab-content {
+  background: #fff;
+}
+.fa {
+  margin-right: 10px;
+}
+
+.tab_container section * {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+  0% { 
+  	opacity: 0;
+  }
+
+  100% { 
+  	opacity: 1;
+  }
+  
+}
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
 header {
@@ -288,165 +398,193 @@ main {
 
 /* SECOND BREAKPOINT (DESKTOP SIZE) */
 @media screen and (min-width: 1000px) {
-header {
-    background: #222;
-    color: #ccc;
-  }
-nav {
-    display: block;
-  }
-nav a {
-    line-height: 3em;
-    width: inherit;
-  }
-#menu {
-    display: none;
-  }
-main {
-    max-width: 100%;
-}
-#banner img {
-    width:60%;
-	height:600px;
-}
-nav a:hover {
-    background: #8B008B;
-}
-h1{
-  font-size: 3em;
-  margin: 0;
-  padding: 1em;
-  background-color:#8B008B;
-  color:#F0FFFF;
-}
-.flex-container {
-    display: flex;
-    justify-content:space-around;
-    align-items: flex-end;
-	flex-wrap: wrap;
-	box-sizing: border-box;
-	flex-direction:row;
-}
-.player1 {
-  position: relative;
-  box-sizing: border-box;
-  width: 350px;
-  height: 300px;
-  padding-top:4em;
-  animation-name: movingBox;
-  animation-duration: 5s;
-  animation-iteration-count: 1; /* infinite */
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-.player2 {
-  position: relative;
-  box-sizing: border-box;
-  width: 350px;
-  height: 300px;
-  padding-top:4em;
-  animation-name: movingBox1;
-  animation-duration: 5s;
-  animation-iteration-count: 1; /* infinite */
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-.player3 {
-  position: relative;
-  box-sizing: border-box;
-  width: 200px;
-  height: 200px;
-  padding-top:4em;
-  animation-name: movingBox2;
-  animation-duration: 5s;
-  animation-iteration-count: 1; /* infinite */
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-#map {
-	margin-top:20px;
-	height:600px;
-	width: 50%;
-	border:2px solid #8B008B;
-}
-#map1 {
-	margin-top:20px;
-	height:600px;
-	width: 50%;
-	border:2px solid #8B008B;
-}
-@keyframes movingBox	{
-    0% 	{top:0px; left:0px;}
-	50% {top: -5em; left: 0;}
-	75% {top:0em; left:0;}
-	100% {top: 0px; left: 0px;}
-}
-@keyframes movingBox2 {
-    0%  {left:0px;}
+    header {
+        background: #222;
+        color: #ccc;
+    }
 
-	50% { left: -29.2%;}
-	
-	75% {left: -29.2%;}
-	
-	100% { left: 0px;}
-}
-#btn {
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    float:left; 
-    z-index: 99; 
-    background-color: #F08080; 
-    color: #F0FFFF; 
-    padding: 15px; 
-    border-radius: 10px;
-	cursor:pointer;
-	border:none;
-	outline:none;
-}
+    nav {
+        display: block;
+    }
 
-#btn:hover {
-    background-color: #cc66ff
-}
-.player1:hover {
-    transform: scale(1.1);
-}
-#leagues img:hover {
-    transform: scale(1.1);
-}
-.logo1 img:hover {
-    transform: scale(1.3);
-}
-.player1 figcaption {
-	box-sizing: border-box;
-	height: -4em;
-	line-height: 1em;
-	padding: .1em;
-	transform: translateY(-4em);
-	opacity: 0;
-	transition: all .5s;
-}
+        nav a {
+            line-height: 3em;
+            width: inherit;
+        }
 
-.player1 figure:hover figcaption {
-  transform: translateY(-5em);
-  opacity: 0.78;
-  height:100px;
-}
-.logo1{
-	width:100px;
-	float:right;
-	margin-bottom:70px;
+    #menu {
+        display: none;
+    }
 
+    main {
+        max-width: 100%;
+    }
+
+    #banner img {
+        width: 60%;
+        height: 600px;
+    }
+
+    nav a:hover {
+        background: #8B008B;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        padding: 1em;
+        background-color: #8B008B;
+        color: #F0FFFF;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        flex-direction: row;
+    }
+
+    .player1 {
+        position: relative;
+        box-sizing: border-box;
+        width: 350px;
+        height: 300px;
+        padding-top: 4em;
+        animation-name: movingBox;
+        animation-duration: 5s;
+        animation-iteration-count: 1; /* infinite */
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    .player2 {
+        position: relative;
+        box-sizing: border-box;
+        width: 350px;
+        height: 300px;
+        padding-top: 4em;
+        animation-name: movingBox1;
+        animation-duration: 5s;
+        animation-iteration-count: 1; /* infinite */
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    .player3 {
+        position: relative;
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        padding-top: 4em;
+        animation-name: movingBox2;
+        animation-duration: 5s;
+        animation-iteration-count: 1; /* infinite */
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes movingBox {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+
+        50% {
+            top: -5em;
+            left: 0;
+        }
+
+        75% {
+            top: 0em;
+            left: 0;
+        }
+
+        100% {
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    @keyframes movingBox2 {
+        0% {
+            left: 0px;
+        }
+
+        50% {
+            left: -29.2%;
+        }
+
+        75% {
+            left: -29.2%;
+        }
+
+        100% {
+            left: 0px;
+        }
+    }
+
+    #btn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        float: left;
+        z-index: 99;
+        background-color: #F08080;
+        color: #F0FFFF;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+        #btn:hover {
+            background-color: #cc66ff;
+        }
+
+    .player1:hover {
+        transform: scale(1.1);
+    }
+
+    #leagues img:hover {
+        transform: scale(1.1);
+    }
+
+    .logo1 img:hover {
+        transform: scale(1.3);
+    }
+
+    .player1 figcaption {
+        box-sizing: border-box;
+        height: 4em;
+        line-height: 1em;
+        padding: .1em;
+        transform: translateY(-4em);
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .player1 figure:hover figcaption {
+        transform: translateY(-5em);
+        opacity: 0.78;
+        height: 100px;
+    }
+
+    .logo1 {
+        width: 350px;
+        margin-bottom: 70px;
+        margin-left: 0px;
+    }
+
+    .signup h2 {
+        margin-top: 20px;
+    }
+
+    .teams h2 {
+        margin-top: 20px;
+    }
 }
-.signup h2 {
-	margin-top:20px;
-}
-.teams h2 {
-	margin-top:20px;
-	
-}
-}
-/*https://gyazo.com/848de3aa03742d8209beca769744eb1b
-https://gyazo.com/d33dccf5f08785e8bb76f4b128ed4f89  web idea implement*/
 
 /* END SECOND BREAKPOINT */
