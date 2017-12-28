@@ -250,8 +250,9 @@ figure img {
 }
 #signup h2 {
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 15px auto 20px auto;
 }
+
 .tab_container h2 {
     display:block;
     margin: 100px auto 20px auto;
@@ -273,6 +274,7 @@ figure img {
 	height:600px;
 	width: 100%;
 	border:2px solid #8B008B;
+	border-radius:10px;
 }
 #btn {
     display: none; 
@@ -395,14 +397,39 @@ label:last-child {
         height: 115px;
     }
 	
+	#tab_container {
+    padding: 60px 0;
+    text-align: center;
+	
+}
+
+#tab_container article {
+    width: 100%;
+    float: left;
+    background-color: #F0FFFF;
+	border-radius:10px;
+
+}
+#tab_container section {
+    background-color: #F0FFFF;
+	border-radius:10px;
+
+}
+#tab_container article:first-child {
+    margin-right: 20px;
+}
+
+#tab_container h2 {
+    display: block;
+    margin: 0 auto 20px auto;
+}
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
 header {
     background: #444;
-    color: #ccc;
   }
 nav a {
-    width: 44%;
+    width: 60%;
     display: inline-block;
   }
 nav a:hover {
@@ -415,6 +442,9 @@ main {
     width: 60%;
     margin: 0 auto;
   }
+body {
+	background:white;
+}
   #banner img {
         width: 60%;
         height: 300px;
@@ -446,7 +476,7 @@ main {
         width: 300px;
         height: 250px;
         padding-top: 4em;
-        animation-name: movingBox1;
+        animation-name: movingBox;
         animation-duration: 5s;
         animation-iteration-count: 1; /* infinite */
         animation-direction: alternate;
@@ -467,7 +497,32 @@ main {
         opacity: 0.78;
         height: 100px;
     }
+	#tab_container h2 {
+    display: block;
+    margin: 0px auto 20px auto;
+}
+h2 {
+	width:40%;
+}
+h3 {
+	width:40%;
+}
+#iframe {
+	width:50%;
+	height:300px;
+	border-radius:10px;
+	border:2px solid #8B008B;
+}
+@keyframes movingBox {
+    0% {top: 0px;}
+
+    25% {top: -1em;}
 	
+	50% {top: 1em;}
+	
+	100% {top: 0px;}
+}
+
 
 }
 
@@ -477,10 +532,12 @@ main {
 /* SECOND BREAKPOINT (DESKTOP SIZE) */
 @media screen and (min-width: 1000px) {
     header {
-        background: #222;
+        background:#DCDCDC;
         color: #ccc;
     }
-
+	body {
+	background:#DCDCDC;
+}
     nav {
         display: block;
     }
@@ -514,6 +571,10 @@ main {
         background-color: #8B008B;
         color: #F0FFFF;
     }
+
+	#leagues h3 {
+		width:100%;
+	}
 
 
 
@@ -636,13 +697,16 @@ main {
         margin-left: 0px;
     }
 
-    .signup h2 {
+    #signup h2 {
         margin-top: 20px;
     }
 
-    .teams h2 {
+    #players h2 {
         margin-top: 20px;
     }
+	#tab_container h2 {
+		margin-top:20px;
+	}
 	#iframe {
 	width:60%;
 	height:500px;
