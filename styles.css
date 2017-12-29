@@ -39,6 +39,7 @@ a {
 p {
 	font-size:1.2em;
 	background-color:#F0FFFF;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 h1{
   font-size: 1.5em;
@@ -47,6 +48,7 @@ h1{
   background-color:#8B008B;
   color:#F0FFFF;
   border-radius:10px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 h2 {
 	font-size: 1.5em;
@@ -58,6 +60,7 @@ h2 {
 	text-align:center;
 	border: 2px solid #8B008B;
 	border-radius:10px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 h3 {
 	font-size:1.2em;
@@ -69,6 +72,7 @@ h3 {
 	text-align:center;
 	border: 2px solid #DC143C;
 	border-radius:20px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 main {
   background: #F0FFFF;
@@ -117,15 +121,15 @@ figure img {
   display: block;
   border-radius: 10px;
 }
-
 .flex-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	width:100%;
 }
+
 #players {
     padding: 60px 0;
     text-align: center;
@@ -258,13 +262,13 @@ figure img {
     margin: 15px auto 20px auto;
 }
 @keyframes movingBox {
-    0% {left: 0px;}
+    0% {top: 0px;}
 
-    25% {left: -2em;}
+    25% {top: -1em;}
 	
-	50% {left: 2em;}
+	50% {top: 1em;}
 	
-	100% {left: 0px;}
+	100% {top: 0px;}
 }
 #map {
 	margin-top:20px;
@@ -381,6 +385,36 @@ input[type="radio"]{
 	border-radius:10px;
 
 }
+#tab_container h2 {
+    display: block;
+    margin: 0px auto 20px auto;
+}
+#news {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#news section {
+    width: 100%;
+    float: left;
+    background-color:#F0FFFF;
+	border-radius:10px;
+
+}
+#news section:first-child {
+    margin-right: 20px;
+}
+#news h2 {
+    display: block;
+    margin: 15px auto 20px auto;
+}
+#demo {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+a {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
@@ -402,7 +436,7 @@ body {
 	background:#D3D3D3;
 }
   #banner img {
-        width: 100%;
+        width: 80%;
         height: 300px;
     }
 	.flex-container {
@@ -526,11 +560,11 @@ h3 {
 
     main {
         max-width: 100%;
-		background-color:#696969;
+		background-color:#F0FFFF;
     }
 
     #banner img {
-        max-width: 60%;
+        max-width: 80%;
         height: 450px;
 		
     }
