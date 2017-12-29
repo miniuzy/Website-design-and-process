@@ -38,8 +38,20 @@ There is no site map included as the website is a single page application. A sit
 * Google Chrome
 * Firefox
 
-### Media resources used
+## Media resource references
+https://i.pinimg.com/originals/2d/4b/24/2d4b24977d53753734d7d00e485f83b8.jpg - banner image
+https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1010px-Manchester_United_FC_crest.svg.png - man utd logo
+http://e0.365dm.com/17/09/16-9/20/skysports-paul-pogba-manchester-united_4098869.jpg?20171030110632 - pogba image
+http://e1.365dm.com/17/02/16-9/20/skysports-anthony-martial-martial-goal-martial-man-utd_3889141.jpg?20170211163033 - martial image
+http://e1.365dm.com/16/03/16-9/20/marcus-rashford-manchester-united-manchester-city_3434872.jpg?20160320162539 - rashford image
+https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/732px-Real_Madrid_CF.svg.png - real madrid logo
+http://e1.365dm.com/16/12/16-9/20/skysports-cristiano-ronaldo-real_3855043.jpg?20161218163243 - cristiano ronaldo image
+http://e1.365dm.com/15/05/16-9/20/gareth-bale-real-madrid-football_3299339.jpg?20150505103704 - bale image
+http://e2.365dm.com/17/04/16-9/20/skysports-asensio-real-madrid-la-liga_3939006.jpg?20170426191058 - asensio image
+http://cdn.bleacherreport.net/images/team_logos/328x328/epl.png - logo for barclays premier league
 
+https://www.youtube.com/watch?v=h5qZbOOPRwM youtube video 1
+https://www.youtube.com/watch?v=6DNt1Libvvs youtube video 2
 ## Testing
 ### User Testing
 I tested this website through two general types of people who access football websites, teenagers and adults. I asked them how I could improve the layout and additionally what other content I could bring that would make it easier for them to follow their favourite team or player. The found teenager no problems with the layout of my site but rather it was lacking content and suggested some sort of highlight reel for the players that are shown on the website, I implemented this using the tab panels to allow users to switch between videos easily. Additionally, the teenager complained that the banner did not scale well with the website, but this is an issue on the image used as it is only a placeholder and if I was to make this website ready for commercial use I would hire a graphic artist to design the sized banner of my choice. The adult had one critique and that was the nav menu was showing irrelevant information, when the nav menu can only be accessed at the top of the page and the news is directly under it there was no need for a news link in the nav menu which I then promptly removed.
