@@ -5,9 +5,9 @@ For my initial design I wanted to go with a multi-page application that containe
 ##### Single Page Application
 For my single page application (SPA) I decided to start at the nav bar as that would be key in how my website would look and is a requirement for single page applications to link with each piece of content, I started with the mobile query nav menu by having it open and close and used the same method to create a slightly different nav menu for the tablet query and finally I left a normal nav menu for the desktop query. The nav menu would be followed by a banner and after that the main contents of the page would be shown.
 ![SPA wireframe](/img/wf1.png)
-(/img/wf2.png)
-(/img/wf3.png)
-(/img/wf4.png)
+![SPA wireframe1](/img/wf2.png)
+![SPA wireframe2](/img/wf3.png)
+![SPA wireframe3](/img/wf4.png)
 ##### Multi-page design
 My multi page design would be based on what I did on the single page application, but the difference would be that it would not have a nav bar at the top but rather on the side where it flows with the website allowing you access around the website as you constantly move between pages. But I found no need for multiple pages as the website currently does not need the extra space for the information it has.
 ![Multi-Page Design](/docs/img/multiDesign.png)
