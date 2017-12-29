@@ -5,6 +5,7 @@ body {
   color: black;
   text-align: center;
   align-items:center;
+  
 }
 header {
   background: #ccc;
@@ -71,10 +72,12 @@ h3 {
 }
 main {
   background: #F0FFFF;
+  border-radius:10px;
 }
 #banner img {
     width:100%;
 	height:200px;
+	border-radius:10px;
 }
 figure {
   width:100%;
@@ -121,6 +124,7 @@ figure img {
     align-items: center;
 	flex-wrap: wrap;
 	box-sizing: border-box;
+	width:100%;
 }
 #players {
     padding: 60px 0;
@@ -181,6 +185,7 @@ figure img {
     width: 100%;
     float: left;
     background-color:#f5f5f5;
+	border-radius:10px;
 
 }
 #teams article:first-child {
@@ -252,14 +257,6 @@ figure img {
     display: block;
     margin: 15px auto 20px auto;
 }
-
-.tab_container h2 {
-    display:block;
-    margin: 100px auto 20px auto;
-}
-
-
-
 @keyframes movingBox {
     0% {left: 0px;}
 
@@ -284,7 +281,7 @@ figure img {
     z-index: 99; 
     background-color: #cc66ff; 
     color: #F0FFFF; 
-    padding: 15px; 
+    padding: 10px; 
     border-radius: 10px;
 	cursor:pointer;
 	border:none;
@@ -296,46 +293,23 @@ figure img {
 input[type="radio"]{
     display:none;
 }
-
 .tab_container section {
   display: none;
   padding: 1em;
   clear: both;
 }
-.tab_container section footer {
-  position: absolute;
-  bottom: 0;
-  background: #ccc;
-  width: 100%;
-  margin-left: -1em;
-}
-.tab_container section footer p {
-  padding: 0 1em;
-  line-height: 1.5em;
-  text-align: center;
-}
-
 .tab_container label {
   display: block;
   box-sizing: border-box;
   float: left;
   width: 50%;
-  color: #888;
+  color: white;
   cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  background: #f5f5f5;
+  background: black;
   line-height: 3em;
   border-radius:10px;
-  margin-top:50px;
 }
 
-label span {
-  display: none;
-}
-label:last-child {
-  border-right: none;
-}
 
 
 #tab1:checked ~ #content1,
@@ -345,25 +319,20 @@ label:last-child {
 }
 
 [id^="tab"]:checked + label {
-  background: #ccc;
-  color: #222;
+  background: #f5f5f5;
 }
 [id^="tab"]:checked + label .fa {
-  color: #090;
+  color: red;
 }
 
 .tab-content {
-  background: #fff;
-}
-.fa {
-  margin-right: 10px;
-}
+  background: #F0FFFF;
+  border-radius:10px;
 
+}
 .tab_container section * {
   animation: fadeIn 0.7s ease-in-out;
 }
-
-
 @keyframes fadeIn {
 
   0% { 
@@ -381,7 +350,13 @@ label:last-child {
 	border-radius:10px;
 	border:2px solid #8B008B;
 }
-	.player1 figcaption {
+#iframe1 {
+	width:300px;
+	height:300px;
+	border-radius:10px;
+	border:2px solid #8B008B;
+}
+.player1 figcaption {
         box-sizing: border-box;
         height: 4em;
         line-height: 1em;
@@ -391,17 +366,13 @@ label:last-child {
         transition: all .5s;
     }
 
-    .player1 figure:hover figcaption {
+.player1 figure:hover figcaption {
         transform: translateY(-3.1em);
         opacity: 0.78;
         height: 115px;
     }
 	
-	#tab_container {
-    padding: 60px 0;
-    text-align: center;
-	
-}
+
 
 #tab_container article {
     width: 100%;
@@ -410,26 +381,11 @@ label:last-child {
 	border-radius:10px;
 
 }
-#tab_container section {
-    background-color: #F0FFFF;
-	border-radius:10px;
 
-}
-#tab_container article:first-child {
-    margin-right: 20px;
-}
-
-#tab_container h2 {
-    display: block;
-    margin: 0 auto 20px auto;
-}
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
-header {
-    background: #444;
-  }
 nav a {
-    width: 60%;
+    width: 44%;
     display: inline-block;
   }
 nav a:hover {
@@ -439,14 +395,14 @@ h1 {
     font-size: 2em;
   }
 main {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
   }
 body {
-	background:white;
+	background:#D3D3D3;
 }
   #banner img {
-        width: 60%;
+        width: 100%;
         height: 300px;
     }
 	.flex-container {
@@ -460,7 +416,7 @@ body {
 	    .player1 {
         position: relative;
         box-sizing: border-box;
-        width: 300px;
+        width: 40%;
         height: 250px;
         padding-top: 4em;
         animation-name: movingBox;
@@ -473,7 +429,7 @@ body {
     .player2 {
         position: relative;
         box-sizing: border-box;
-        width: 300px;
+        width: 40%;
         height: 250px;
         padding-top: 4em;
         animation-name: movingBox;
@@ -513,6 +469,12 @@ h3 {
 	border-radius:10px;
 	border:2px solid #8B008B;
 }
+#iframe1 {
+	width:100%;
+	height:300px;
+	border-radius:10px;
+	border:2px solid #8B008B;
+}
 @keyframes movingBox {
     0% {top: 0px;}
 
@@ -520,8 +482,17 @@ h3 {
 	
 	50% {top: 1em;}
 	
+	75% {top: 0.5em;}
+	
 	100% {top: 0px;}
 }
+.logo1 img {
+	width:20%;
+	float:left;
+	margin-left:40%;
+}
+
+
 
 
 
@@ -533,11 +504,12 @@ h3 {
 /* SECOND BREAKPOINT (DESKTOP SIZE) */
 @media screen and (min-width: 1000px) {
     header {
-        background:#DCDCDC;
+        background:#DCDCDC ;
         color: #ccc;
     }
 	body {
-	background:#DCDCDC;
+	background:#696969;
+	
 }
     nav {
         display: block;
@@ -554,11 +526,13 @@ h3 {
 
     main {
         max-width: 100%;
+		background-color:#696969;
     }
 
     #banner img {
-        width: 60%;
-        height: 600px;
+        max-width: 60%;
+        height: 450px;
+		
     }
 
     nav a:hover {
@@ -572,9 +546,9 @@ h3 {
         background-color: #8B008B;
         color: #F0FFFF;
     }
-
+	
 	#leagues h3 {
-		width:100%;
+		width:90%;
 	}
 
 
@@ -582,10 +556,10 @@ h3 {
     .player1 {
         position: relative;
         box-sizing: border-box;
-        width: 350px;
+        max-width: 350px;
         height: 300px;
         padding-top: 4em;
-        animation-name: movingBox;
+        animation-name: swapplayers;
         animation-duration: 5s;
         animation-iteration-count: 1; /* infinite */
         animation-direction: alternate;
@@ -598,53 +572,16 @@ h3 {
         width: 350px;
         height: 300px;
         padding-top: 4em;
-        animation-name: movingBox1;
-        animation-duration: 5s;
-        animation-iteration-count: 1; /* infinite */
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
+        animation-name: none;
     }
 
-    @keyframes movingBox {
-        0% {
-            top: 0px;
-            left: 0px;
-        }
-
-        50% {
-            top: -5em;
-            left: 0;
-        }
-
-        75% {
-            top: 0em;
-            left: 0;
-        }
-
-        100% {
-            top: 0px;
-            left: 0px;
-        }
+    @keyframes swapplayers {
+	0%   { left: 0px; top: 0px; }
+	25%  { left: 0; top: 0px; }
+	50%  { left: 0; top: calc(-10% - .5%);}
+	75%  { left: 0; top: calc(5% - .5%); }
+	100% { left: 0px; top: 0px; }
     }
-
-    @keyframes movingBox2 {
-        0% {
-            left: 0px;
-        }
-
-        50% {
-            left: -29.2%;
-        }
-
-        75% {
-            left: -29.2%;
-        }
-
-        100% {
-            left: 0px;
-        }
-    }
-
     #btn {
         display: none;
         position: fixed;
@@ -673,7 +610,7 @@ h3 {
     }
 
     .logo1 img:hover {
-        transform: scale(1.3);
+        transform: scale(2.3);
     }
 
     .player1 figcaption {
@@ -712,6 +649,18 @@ h3 {
 	width:60%;
 	height:500px;
 	}
+	#iframe1 {
+	width:60%;
+	height:500px;
+	}
+		.flex-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        flex-direction: row;
+    }
 }
 
 /* END SECOND BREAKPOINT */

@@ -62,12 +62,6 @@ function scrollFunction() {
 }
 
 
-var alerted = localStorage.getItem('alerted') || '';
-if (alerted != 'yes') {
-    confirm("Please remember to sign up now!");
-    localStorage.setItem('alerted', 'yes');
-    window.scrollTo(0, document.body.scrollHeight);
-}
 
 
 
