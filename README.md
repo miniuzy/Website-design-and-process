@@ -12,13 +12,13 @@ My wireframe sketches
 
 
 ## PARC
-###Proximity
+### Proximity
 Using the same styling throughout the website such as enough spacing to differentiate between articles and different colours for different articles., related content is grouped with each other such as all image contents are with each other allowing the user to find image content easier. The player stats on the figcaptions are done through using lists and nested lists, this makes it very easy to follow the stats.
-###Alignment
+### Alignment
 Flexbox grid was used to align the images with each other in all media queries, also the map was aligned to scale as you enlarge the website, furthermore, for the mobile and desktop media query the banner is aligned with the main body. In mobile everything has perfect alignment from edge to edge with the title, banner and main body.
-###Repetition
+### Repetition
 This was achieved by repeating colour layout between articles and repeating images with same CSS layout and having figcaptions. Also, the colour scheme between headings was repeated too. Rounded images were repeated using border radius to make it easy on the eye.
-###Contrast
+### Contrast
 Contrast was done in my tab container where the tab looked to be in line with other colours used in the site when you were on that video and the video not being played would be in a black and white tab this allowed users to know which video they were watching. Additionally, a hover that expanded the images in desktop was put in to show users in a cluster of images which image they were focused on this was backed up with the figcaption that popped up when you hovered over one image. 
 Colour scheme remains similar throughout all media queries and using a darker border on a light background makes it easier to identify headings.
 ## Information Architecture
